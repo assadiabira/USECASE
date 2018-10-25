@@ -3,13 +3,7 @@ node {
 	agent any 
 //récupération du code utilisateur présent dans Git
 	stage ("Dev"){
+		echo " job: DEV"
 		checkout scm
-	}
-//outil de test du code, renvoie OK ci code bon	
-	stage ("Test"){
-		sh 'python Usecase/jeu_plus_moins_ok.py'
-		if ( Usecase/jeu_plus_moins_ok.py || true){
-			echo "test passed: it's OK!"
-		}
 	}
 }
