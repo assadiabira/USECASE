@@ -12,12 +12,4 @@ node {
 			echo "test passed: it's OK!"
 		}
 	}
-//si OK: compilation du code par la machine et stockage des binaires dans artifactory	
-	stage ("Deployement"){
-			
-	}
-	post{
-		succefull{
-		}
-	}
 }
