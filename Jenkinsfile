@@ -13,9 +13,6 @@ pipeline {
 	}
 //si OK: compilation du code par la machine et stockage des binaires dans artifactory	
 	stage ("Deployement"){
-		sh Usecase/jeu_plus_moins_ok.py
-		
-		
+		sh Usecase/jeu_plus_moins_ok.py	
 	}
-
 }
