@@ -1,3 +1,0 @@
-pipeline {
-  stage ("Dev"){
-  
