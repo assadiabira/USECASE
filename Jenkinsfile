@@ -1,4 +1,4 @@
-pipeline {
+node {
 //executeur pour la construction des jobs
 	agent any 
 //récupération du code utilisateur présent dans Git
