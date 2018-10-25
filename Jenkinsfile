@@ -4,7 +4,7 @@ node {
 //récupération du code utilisateur présent dans Git
 	stage ("Dev"){
 		checkout scm
-		def branch = Usecase/jeu_plus_moins_ok.py
+		sh 'make'
       
 	}
 //outil de test du code, renvoie OK ci code bon	
