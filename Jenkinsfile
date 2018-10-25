@@ -3,7 +3,9 @@ node {
 	agent any 
 //récupération du code utilisateur présent dans Git
 	stage ("Dev"){
-		checkout scm	
+		checkout scm
+		def branch: Usecase/jeu_plus_moins_ok.py
+      
 	}
 //outil de test du code, renvoie OK ci code bon	
 	stage ("Test"){
