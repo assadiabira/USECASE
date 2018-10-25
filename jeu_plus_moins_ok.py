@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Aug 14 16:41:42 2018
-
-@author: adiabira
-"""
 #import de la fonction random
 import random
  
