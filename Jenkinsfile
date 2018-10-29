@@ -10,10 +10,10 @@ node{
     	echo "code OK"
 		}
   } 	
-	stage ("Deployment"){
-		sh "/var/lib/jenkins/Usecase/jeu_plus_moins.py"
-		junit "/var/lib/jenkins/Usecase/report.xml"
-	}
+	//stage ("Deployment"){
+		//sh "/var/lib/jenkins/Usecase/jeu_plus_moins.py"
+		//junit "/var/lib/jenkins/Usecase/report.xml"
+	//}
 } 
    
 		
