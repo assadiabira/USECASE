@@ -5,10 +5,7 @@ node{
 	}
   stage ("Test"){
 		echo "Test in progress"
-    when{
-      sh "python -m py_compile /var/lib/jenkins/Usecase/jeu_plus_moins.py"
-		  echo "code OK"
-    }
+    sh "python -m py_compile /var/lib/jenkins/Usecase/jeu_plus_moins.py"
   } 	
 	//stage ("Deployment"){
 		//sh "/var/lib/jenkins/Usecase/jeu_plus_moins.py"
