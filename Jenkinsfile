@@ -2,7 +2,7 @@ node{
   stage ("Dev") {
     echo "Dev in progress"
     checkout scm
-		archiveArtifacts artifacts: '/var/lib/jenkins/Usecase/archives_usecase.jar' , fingerprint:true
+		archiveArtifacts artifacts: '/var/lib/jenkins/Usecase/*.jar' , fingerprint:true
 	}
   stage ("Test"){
 		echo "Test in progress"
