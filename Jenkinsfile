@@ -5,8 +5,9 @@ node{
 	}
   stage ("Test"){
 		echo "Test in progress"
-    sh "/var/lib/jenkins/Usecase/jeu_plus_moins.py || true"
-    echo "code OK"
+		sh "/var/lib/jenkins/Usecase/jeu_plus_moins.py || true"{
+    	echo "code OK"
+		}
   } 	
 	stage ("Deployment"){
 		sh "/var/lib/jenkins/Usecase/jeu_plus_moins.py"
