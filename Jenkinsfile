@@ -4,8 +4,8 @@ node{
     checkout scm
   }
   stage ("Test"){
-    sh ("/var/lib/jenkins/jeu_plus_moins_OK.py")
-    if ("/var/lib/jenkins/jeu_plus_moins_OK.py" || true){
+    sh ("/var/lib/jenkins/jeu_plus_moins.py")
+    if ("/var/lib/jenkins/jeu_plus_moins.py" || true){
       echo ("code OK")
     }
   }  
