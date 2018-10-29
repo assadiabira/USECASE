@@ -1,8 +1,8 @@
 node{
- agent any
- stage ("Dev"){ 
-   echo " Job1:Dev"
- }
-}
+  stage ("Dev") {
+    echo "Dev in progress"
+    checkout scm
+  }
+} 
    
 		
