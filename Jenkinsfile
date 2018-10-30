@@ -4,12 +4,16 @@ node{
     checkout scm
 	}
   stage ("Test"){
-		echo "Test in progress"
-    sh "python -m py_compile /var/lib/jenkins/Usecase/jeu_plus_moins.py"
-	
+    echo "Test in progress"
+    sh "javac -g -Werror /var/lib/jenkins/Usecase/factorial_script.java"
+		post{
+			succes{
+	 			echo "Code Ok"
+			}
+		}
   } 	
 	stage ("Deployment"){
-	sh "python /var/lib/jenkins/Usecase/jeu_plus_moins.py"
+	sh "java /var/lib/jenkins/Usecase/factorial_script.java"
 	junit "/var/lib/jenkins/Usecase/report.xml"
 	}
 } 
