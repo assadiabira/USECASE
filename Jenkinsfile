@@ -8,7 +8,7 @@ node{
     sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
   } 	
 	stage ("Deployment"){
-		sh "make /var/lib/jenkins/Usecase/consultation_mysql.php" 
+		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php" 
 	} 
 }
 		
