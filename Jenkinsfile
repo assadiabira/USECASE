@@ -5,7 +5,7 @@ node{
 	}
   stage ("Test"){
     echo "Test in progress"
-    sh "php -l var/lib/jenkins/Usecase/consultation_mysql.php"
+    sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
 		post{
 			succes{
 	 			echo "Code Ok"
