@@ -8,17 +8,18 @@ node{
     sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
   } 	
 	stage ("Deployment"){
-		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php"
-	}
+		steps{
+			sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php"
+		}
 	// écriture d'un rapport 	
-	post{
-		always{
-			junit "/var/lib/jenkins/Usecase/report.xml"
+		post{
+			always{
+				junit "/var/lib/jenkins/Usecase/report.xml"
+			}
+			success{
+				echo "code compilé"
+			}
 		}
-		success{
-			echo "code compilé"
-		}
-	}
+	} 
 } 
-   
 		
