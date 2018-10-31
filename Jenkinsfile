@@ -10,6 +10,7 @@ node{
 	stage ("Deployment"){
 		steps{
 			sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php"
+			archiveArtifacts artifacts: '/var/lib/jenkins/Usecase/archive.jar', fingerprint: true 
 		}
 	} 
 } 
