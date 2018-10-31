@@ -15,7 +15,7 @@ node{
 	//stage ("Deployment"){
 	//sh "php /var/lib/jenkins/Usecase/consultation_mysql.php"
 	//junit "/var/lib/jenkins/Usecase/report.xml"
-	}
+	//}
 } 
    
 		
