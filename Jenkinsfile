@@ -10,11 +10,14 @@ node{
 	stage ("Deployment"){
 		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php"
 		post{
+			always{
+				junit "/var/lib/jenkins/Usecase/report.xml"
+			}
 			success{
 				echo "code compilé"
 			}
 		}
-	//junit "/var/lib/jenkins/Usecase/report.xml"
+	//
 	}
 } 
    
