@@ -5,16 +5,16 @@ node{
 	}
   stage ("Test"){
     echo "Test in progress"
-    sh "javac -g -Werror /var/lib/jenkins/Usecase/factorial_script.java"
+    sh "php -l var/lib/jenkins/Usecase/consultation_mysql.php"
 		post{
 			succes{
 	 			echo "Code Ok"
 			}
 		}
   } 	
-	stage ("Deployment"){
-	sh "java /var/lib/jenkins/Usecase/factorial_script.java"
-	junit "/var/lib/jenkins/Usecase/report.xml"
+	//stage ("Deployment"){
+	//sh "php /var/lib/jenkins/Usecase/consultation_mysql.php"
+	//junit "/var/lib/jenkins/Usecase/report.xml"
 	}
 } 
    
