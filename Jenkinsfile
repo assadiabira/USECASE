@@ -7,10 +7,10 @@ node{
     echo "Test in progress"
     sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
   } 	
-	//stage ("Deployment"){
-	//sh "php /var/lib/jenkins/Usecase/consultation_mysql.php"
+	stage ("Deployment"){
+	sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php"
 	//junit "/var/lib/jenkins/Usecase/report.xml"
-	//}
+	}
 } 
    
 		
