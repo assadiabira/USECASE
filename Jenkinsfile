@@ -6,7 +6,7 @@ node{
   stage ("Test"){
     echo "Test in progress"
     sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
-		archiveArtifacts artifacts: '*/target/*.jar', fingerprint: true
+		junit '**/target/*.xml'
   } 	
 	stage ("Deployment"){
 		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php" 
