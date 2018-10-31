@@ -8,8 +8,6 @@ node{
     sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
   } 	
 	stage ("Deployment"){
-		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php"
-		archiveArtifacts artifacts: '/var/lib/jenkins/Usecase/archive.jar', fingerprint: true 
-	} 
+		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php" 
 } 
 		
