@@ -1,14 +1,14 @@
 node{
   stage ("Dev") {
-    echo "Dev in progress"
-    checkout scm
-	}
+    fileExists '/var/lib/jenkins/Usecase/inverse_liste.java'
+  }
   stage ("Test"){
-    echo "Test in progress"
-    sh "php -l /var/lib/jenkins/Usecase/consultation_mysql.php"
+    sh "javac /var/lib/jenkins/Usecase/inverse_liste.java"
   } 	
 	stage ("Deployment"){
-		sh "php -f /var/lib/jenkins/Usecase/consultation_mysql.php" 
-	} 
-}
-		
+    dir('/var/lib/jenkins/Usecase/') {
+        // some block
+      sh "java Inverse"
+    } 
+	}
+}	
