@@ -6,7 +6,7 @@ node{
     sh "javac /var/lib/jenkins/Usecase/inverse_liste.java"
   } 	
 	stage ("Deployment"){
-    dir('/var/lib/jenkins/Usecase/') {
+    dir('/var/lib/jenkins/Usecase/'){
         // some block
       sh "java Inverse"
     } 
